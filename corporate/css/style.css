@@ -1,0 +1,729 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 基本設定
+****************************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.ggmap{
+  width:60%;
+  height:0;
+  overflow: hidden;
+  padding-bottom:56.25%;
+  position:relative;
+}
+.ggmap iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  /*vertical-align: middle;*/
+}
+
+/* CLEAR-FIX */
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.inner {
+  width: 98%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.ttl {
+  font-size: 70px;
+  color: #fff;
+  text-align: center;
+  padding: 90px 0 40px;
+  text-shadow: 0 2px 6px #333;
+}
+
+.sub_ttl {
+  font-size: 40px;
+  padding-top: 120px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+/*ヘッダー
+-----------------------------*/
+
+.header {
+  width: 100%;
+  position: fixed;
+  background: black;
+  z-index: 20;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  text-shadow: 0 1px 0 rgb(241, 245, 242);
+}
+
+.header_nav h1 {
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header_nav_left {
+  display: flex;
+}
+
+.header_nav p {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.header_nav a {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.header_nav a:hover {
+  color:  black;
+}
+
+/*メイン
+-----------------------------*/
+
+.mv_back {
+  width: 100%;
+  height: 88vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  /*    transition: 0.2s;*/
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.back1 {
+  top: -30vh;
+}
+
+.back3 {
+  top: -35vh;
+}
+
+.back4 {
+  top: -30vh;
+}
+
+.back img {
+  opacity: 0;
+  animation: rotation 30s infinite;
+}
+
+.back1 img {
+  animation-delay: 0;
+}
+
+.back2 img {
+  animation-delay: 6s;
+}
+
+.back3 img {
+  animation-delay: 12s;
+}
+
+.back4 img {
+  animation-delay: 18s;
+}
+
+.back5 img {
+  animation-delay: 24s;
+}
+
+@keyframes rotation {
+  0% {
+    opacity: 0;
+  }
+
+  7% {
+    opacity: 1;
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*↑キーフレーム数値はコピペ。意味不明*/
+
+.mv h1 {
+  position: absolute;
+  top: 30%;
+  right: 17%;
+  color: #fff;
+  font-size: 70px;
+  text-shadow: 0 2px 6px #333;
+}
+
+.mv p {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -15px;
+  text-align: center;
+  color: #fff;
+  line-height: 1.2em;
+}
+
+/*CONCEPT
+-----------------------------*/
+
+.concept {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.concept p {
+  line-height: 1.8em;
+}
+
+.concept p:nth-child(3) {
+  font-size: 30px;
+  margin: 80px 0;
+}
+
+/*CITY
+-----------------------------*/
+
+.city {
+  background: #efefef;
+  /*padding-bottom: 100px;*/
+}
+
+.content_c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 130px;
+}
+
+.city_c {
+  position: absolute;
+  top: -30%;
+  left: 27.5%;
+  font-size: 70px;
+  z-index: 15;
+}
+
+.text_white {
+  color: rgb(14, 1, 1);
+}
+
+.chitofuna_img,
+.kyodo_img {
+  max-width: 400px;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content_txt {
+  width: 444px;
+}
+
+.btn_c {
+  right: 1%;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  border: 1px solid #707070;
+  width: 180px;
+  text-align: center;
+  background: #fff;
+}
+
+.btn a {
+  display: block;
+  padding: 15px 0;
+  transition: 0.3s;
+}
+
+.btn a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.content_s {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city_s {
+  position: absolute;
+  top: -30%;
+  left:35%;
+  font-size: 70px;
+  z-index: 15;
+}
+
+.btn_s {
+  left: 0;
+}
+
+/*footer_nav
+-----------------------------*/
+
+.footer_nav {
+  display: flex;
+  justify-content: center;
+  padding: 120px 0 100px;
+}
+
+.footer_nav p {
+  position: relative;
+  padding: 0 40px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer_nav p:hover {
+  opacity: 0.6;
+}
+
+.footer_nav p::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  display: inline-block;
+  margin-left: 40px;
+  width: 1px;
+  height: 20px;
+  background: #333;
+}
+
+.footer_nav p:last-child::after {
+  content: none;
+}
+
+/*footer*/
+
+.footer {
+  background: black;
+  text-align: center;
+  padding: 40PX 0;
+  color: #FFF;
+}
+
+/*about
+-----------------------------*/
+
+.about_mv {
+  background-repeat: no-repeat;
+}
+
+.profile_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.profile_box p {
+  width: 50%;
+}
+
+.prof_name {
+  font-size: 30px;
+}
+
+.about_image {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.about_image img {
+  width: 95%
+}
+
+
+/*ちとふな
+-----------------------------*/
+
+.main {
+  position: relative;
+  padding: 120px 0 180px;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.main_city {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city_name {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.city_name h3 {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.city_info {
+  font-size: 18px;
+  max-width: 470px;
+  width: 96%;
+}
+
+.city_info tr th {
+  padding: 10px;
+  width: 170px;
+  border: 1px solid #aaa;
+}
+
+.city_info tr td {
+  padding: 10px;
+  width: 320px;
+  border: 1px solid #aaa;
+}
+
+.map {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+/*ちとふな
+-----------------------------*/
+
+.content_box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.content_info {
+  max-width: 300px;
+  width: 30%;
+}
+
+.content_info h4 {
+  font-size: 30px;
+}
+
+.content_info ul {
+  display: flex;
+}
+
+.content_info li {
+  color: #fff;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #707070;
+  border-radius: 7px;
+  margin-right: 10px;
+}
+
+.nature,
+.no_nature {
+  background: #7C8929;
+}
+
+.city,
+.no_city {
+  background: #A69B88;
+}
+
+.history,
+.no_history {
+  background: #B48E58;
+}
+
+.opacity {
+  opacity: 0.2;
+}
+
+.content_info p {
+  margin-top: 50px;
+}
+
+/*経堂
+-----------------------------*/
+
+.kyodo_info::after {
+  content: "";
+  height: 35px;
+}
+
+
+
+
+/*レスポンシブ
+-----------------------------*/
+
+@media screen and (max-width: 960px) {
+
+  .back1 {
+    top: 0;
+  }
+
+  .back3 {
+    top: 0;
+  }
+
+  .back4 {
+    top: 0;
+  }
+
+  /*トップページコンテンツ
+-----------------------------*/
+
+  .content_c,
+  .content_s {
+    flex-direction: column;
+  }
+
+  .city_c,
+  .city_s {
+    position: static;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .content_txt {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .btn {
+    position: static;
+  }
+
+  .text_white {
+    color: #333;
+  }
+
+  /*    ちとふな
+    -----------------------------*/
+  .content_box p:first-child {
+    margin-right: 10px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  /*    header_nav
+    -----------------------------*/
+
+  .header_nav {
+    position: relative;
+  }
+
+  .header_nav_left {
+    position: absolute;
+    top: 20px;
+    right: -330px;
+    transition: 0.4s;
+    width: 330px;
+    z-index: 20;
+  }
+
+  .header_nav_left::before {
+    content: "MENU";
+    position: absolute;
+    top: -3px;
+    right: 340px;
+    font-size: 18px;
+  }
+
+  .header_nav_left:hover {
+    transform: translateX(-330px);
+  }
+
+  .none {
+    display: none;
+  }
+
+  /*トップページメイン*/
+  .mv_back {
+    height: 50vh;
+    overflow: hidden;
+  }
+
+  .back1 .back3 .back4 {
+    top: 0;
+  }
+
+  .mv h1 {
+    font-size: 50px;
+  }
+
+  .sub_ttl {
+    font-size: 30px;
+  }
+
+  /*footernav
+    -----------------------------*/
+
+  .footer_nav {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .footer_nav p {
+    text-align: center;
+    background: #3c7bb8;
+    border: 1px solid #fff;
+    width: 50%;
+  }
+
+  .footer_nav p:nth-child(even) {
+    border-right: none;
+    border-top: none;
+  }
+
+  .footer_nav p:nth-child(odd) {
+    border-top: none;
+  }
+
+  .footer_nav p:first-child {
+    width: 100%;
+    border-top: 1px solid #fff;
+  }
+
+  .footer_nav a {
+    display: block;
+    color: #fff;
+  }
+
+  .footer_nav p::after {
+    content: none;
+  }
+
+  /*    about
+    -----------------------------*/
+
+  .profile_box {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .profile_box p {
+    width: 80vw;
+    text-align: justify;
+  }
+
+  .profile_box img {
+    margin: 0 0 50px;
+  }
+
+  .about_image {
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  }
+
+  .about_image img {
+    margin-bottom: 15px;
+  }
+
+  /*ちとふな
+    -----------------------------*/
+
+  .main_city {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map {
+    width: 98%;
+    max-width: 767px;
+    height: 400px;
+    margin-top: 30px;
+  }
+
+  .content_box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content_info {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  .content_box p:first-child {
+    margin: 0 0 20px;
+  }
+
+  .content {
+    padding-bottom: 100px;
+  }
+}
